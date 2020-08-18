@@ -7,7 +7,8 @@ describe 'atributos' do
   #   @pessoa = Pessoa.new
   # end
 
-  let(:pessoa) { Pessoa.new }
+  let(:pessoa) { Pessoa.new } # roda quando a variavel eh invocada pela primeira vez e permanece em cache
+  let!(:bem_vindo) { puts 'WELCOME!' } # Com o let bang (let!), a variavel eh chamada antes de cada um dos testes
 
   it 'have_attributes 1' do
     pessoa.nome  = 'Wátila'
